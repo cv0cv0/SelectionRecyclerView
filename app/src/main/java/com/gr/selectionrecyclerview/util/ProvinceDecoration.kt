@@ -19,7 +19,7 @@ class ProvinceDecoration(val datas: ArrayList<City>) : RecyclerView.ItemDecorati
         super.onDrawOver(c, parent, state)
         val childCount = parent.childCount
         val itemCount = state.itemCount
-        val left = parent.left + parent.paddingLeft + ViewUtil.dp2px(12f)
+        val left = parent.left + parent.paddingLeft + ViewUtil.dp2px(16f)
         val right = parent.right - parent.paddingRight.toFloat()
 
         var prevProvince: String?
