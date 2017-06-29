@@ -5,7 +5,6 @@ import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.Rect
 import android.support.v7.widget.RecyclerView
-import android.util.Log
 import android.view.View
 import com.gr.selectionrecyclerview.entity.City
 
@@ -34,7 +33,8 @@ class ProvinceDecoration(val datas: ArrayList<City>) : RecyclerView.ItemDecorati
 
             val childBottom = child.bottom.toFloat()
             var bottom = Math.max(height, child.top.toFloat())
-            if (position != itemCount - 1 && currentProvince != datas[position + 1].province && childBottom < bottom)
+            if (position != itemCount - 1 && currentProvince != datas[position + 1].province
+                    && childBottom < bottom)
                 bottom = childBottom
             paint.color = Color.GRAY
             c.drawRect(0f, bottom - height, right, bottom, paint)
